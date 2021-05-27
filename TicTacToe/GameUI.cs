@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace TicTacToe
 {
-   public class GameUI
+   public class GameUI//add program ?
     {
         public static GameLogic s_TicTacToeGame = new GameLogic();
         public static BoardGame s_GameMatrix = new BoardGame(InputSize());
@@ -74,7 +74,7 @@ namespace TicTacToe
             switch (reason)
             {
                 case ePrintReason.Clear:
-                    //Ex02.ConsoleUtils.Screen.Clear();
+                    //Ex02.ConsoleUtils.Screen.Clear(); /// return to this
                     Console.Clear();
                     break;
                 case ePrintReason.Define:

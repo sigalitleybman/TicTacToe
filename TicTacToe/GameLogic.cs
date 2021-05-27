@@ -16,10 +16,10 @@ namespace TicTacToe
 
             rowColInput = PrintForward(string.Empty, string.Empty, ePrintReason.Input);
             o_Quit = rowColInput.Equals(quitSymbol);
-            if (o_Quit == false)
+            if (o_Quit == false)//didn't quit
             {
                 success = int.TryParse(rowColInput, out o_Num);
-                while (success == false || o_Num < 1 || o_Num > i_Size)
+                while (success == false || o_Num < 1 || o_Num > i_Size)//wrong input
                 {
                     PrintForward(string.Empty, string.Empty, ePrintReason.WrongInput);
                     rowColInput = PrintForward(string.Empty, string.Empty, ePrintReason.Input);
@@ -221,7 +221,7 @@ namespace TicTacToe
         {
             io_Row = 0;
             io_Column = 0;
-            var Rand = new Random();
+            var Rand = new Random();//change this definition
             io_Row = Rand.Next(1, i_Size + 1);
             io_Column = Rand.Next(1, i_Size + 1);
 
